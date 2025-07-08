@@ -52,8 +52,8 @@
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #000000;
-            color: #d3d3d3;
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+            color: #e0e1dd;
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
@@ -68,7 +68,7 @@
             opacity: 0.3;
         }
         header {
-            background: #000000;
+            background: linear-gradient(90deg, #3a86ff, #8338ec);
             text-align: center;
             padding: 4em 2em;
             position: relative;
@@ -81,35 +81,35 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(0,255,0,0.2), transparent);
-            opacity: 0.4;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            opacity: 0.3;
         }
         header h1 {
             font-size: 3em;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0,255,0,0.5);
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
             animation: fadeIn 1s ease-in;
         }
         header p {
             font-size: 1.2em;
             margin-top: 0.5em;
-            color: #d3d3d3;
+            color: #e0e1dd;
             opacity: 0.9;
         }
         nav {
-            background: rgba(0,0,0,0.9);
+            background: rgba(27, 38, 59, 0.9);
             backdrop-filter: blur(10px);
             padding: 1em;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,255,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
         nav a {
-            color: #00ff00;
+            color: #3a86ff;
             margin: 0 1.5em;
             text-decoration: none;
             font-weight: 600;
@@ -117,37 +117,37 @@
             transition: color 0.3s ease, transform 0.3s ease;
         }
         nav a:hover {
-            color: #ffffff;
+            color: #ff006e;
             transform: translateY(-2px);
         }
         section {
             max-width: 1000px;
             margin: 2em auto;
             padding: 2em;
-            background: rgba(0,0,0,0.7);
+            background: rgba(255,255,255,0.05);
             border-radius: 12px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0,255,0,0.1);
-            border: 1px solid rgba(0,255,0,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
             animation: slideIn 0.5s ease-out;
             position: relative;
             z-index: 1;
         }
         h2 {
             font-size: 2.2em;
-            color: #00ff00;
+            color: #3a86ff;
             margin-bottom: 0.5em;
             font-weight: 700;
             text-transform: uppercase;
         }
         h3 {
             font-size: 1.5em;
-            color: #d3d3d3;
+            color: #e0e1dd;
             margin: 1em 0 0.5em;
         }
         p, ul {
             font-size: 1.1em;
-            color: #b0b0b0;
+            color: #b0b3b8;
         }
         ul {
             list-style-type: none;
@@ -162,7 +162,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #00ff00;
+            color: #ff006e;
             font-weight: bold;
         }
         form {
@@ -175,20 +175,20 @@
         input, textarea {
             padding: 0.8em;
             font-size: 1em;
-            background: rgba(0,0,0,0.5);
-            border: 1px solid rgba(0,255,0,0.3);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 8px;
-            color: #d3d3d3;
+            color: #e0e1dd;
             transition: border-color 0.3s ease;
         }
         input:focus, textarea:focus {
-            border-color: #00ff00;
+            border-color: #3a86ff;
             outline: none;
-            box-shadow: 0 0 8px rgba(0,255,0,0.5);
+            box-shadow: 0 0 8px rgba(58, 134, 255, 0.5);
         }
         button {
-            background: #00ff00;
-            color: #000000;
+            background: linear-gradient(90deg, #3a86ff, #ff006e);
+            color: white;
             padding: 0.8em;
             border: none;
             border-radius: 8px;
@@ -199,11 +199,11 @@
         }
         button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0,255,0,0.7);
+            box-shadow: 0 0 15px rgba(58, 134, 255, 0.7);
         }
         footer {
-            background: #000000;
-            color: #b0b0b0;
+            background: #1b263b;
+            color: #b0b3b8;
             text-align: center;
             padding: 1.5em;
             font-size: 0.9em;
@@ -211,12 +211,12 @@
             z-index: 1;
         }
         a {
-            color: #00ff00;
+            color: #3a86ff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         a:hover {
-            color: #ffffff;
+            color: #ff006e;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
@@ -361,7 +361,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Reach out for investor or partnership inquiries:</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
+        <form action="https://api.static.app/submit" method="POST">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -399,7 +399,7 @@
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = '#00ff00';
+                ctx.fillStyle = 'rgba(58, 134, 255, 0.7)';
                 ctx.fill();
             }
         }
@@ -417,7 +417,7 @@
                     const dy = particles[a].y - particles[b].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
-                        ctx.strokeStyle = `rgba(0,255,0,${1 - distance / 100})`;
+                        ctx.strokeStyle = `rgba(255, 0, 110, ${1 - distance / 100})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[a].x, particles[a].y);
@@ -444,14 +444,6 @@
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
         });
     </script>
 </body>
